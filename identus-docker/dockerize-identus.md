@@ -101,4 +101,4 @@ By changing the following:
     build: ./cloud-agent-M4-workaround
   ```
 
-We recommended way of running docker compose `docker compose up --build --remove-orphans --force-recreate` (just to be extra sure there is no confusion with caches)
+The recommended way of running docker compose is `docker compose up --build --remove-orphans --force-recreate` (just to be extra sure there is no confusion with caches)
