@@ -350,14 +350,14 @@ The triage labels that are defined and additional process details are precised i
 | priority:critical | A large number of users or stakeholders are impacted, performance drained, crash, feature blocked, reproducible, interoperability, legal & regulatory, standard non-compliancy, security breach | |
 | priority:major | Feature is working but some use cases, feature is not stable, regression, frequently seen, reproducible | |
 | priority:minor | No impact on the feature, not reproducible, not frequently seen, UI & cosmetics | |
-| component:cloud-agent | After analyse, the Cloud Agent is impacted by this issue | |
-| component:mediator | After analyse, the Mediator is impacted by this issue | |
-| component:SDK-swift | After analyse, the SDK Swift is impacted by this issue | |
-| component:SDK-KMP | After analyse, the SDK KMP is impacted by this issue | |
-| component:SDK-TS | After analyse, the SDK TS is impacted by this issue | |
-| component:node | After analyse, the Node is impacted by this issue | |
-| component:crypto-lib | After analyse, the Cryptographic library is impacted by this issue | |
-| component:infra | After analyse, the Infrastructure is impacted by this issue | |
+| component:cloud-agent | After analysis, the Cloud Agent is impacted by this issue | |
+| component:mediator | After analysis, the Mediator is impacted by this issue | |
+| component:SDK-swift | After analysis, the SDK Swift is impacted by this issue | |
+| component:SDK-KMP | After analysis, the SDK KMP is impacted by this issue | |
+| component:SDK-TS | After analysis, the SDK TS is impacted by this issue | |
+| component:node | After analysis, the Node is impacted by this issue | |
+| component:crypto-lib | After analysis, the Cryptographic library is impacted by this issue | |
+| component:infra | After analysis, the Infrastructure is impacted by this issue | |
 
 ## Triage process
 
@@ -447,7 +447,7 @@ The SDKs e2e are the system level testing, which are the most important for the 
   - Spin up the environment locally with the respective versions
   - Run the SDKs e2e tests
 
-  If a bug is found, it will be submitted to the corresponding component after analyse and triaged (*Add triage section with labelling next TBD*). Only `Priority: critical` bug will prevent the release and restrictions will be added in the release note accordingly with a fix plan.
+  If a bug is found, it will be submitted to the corresponding component after analysis and triage (*Add triage section with labelling next TBD*). Only `Priority: critical` bug will prevent the release and restrictions will be added in the release note accordingly with a fix plan.
   When a fix is needed, the component release candidate will be updated to include the said fix and the QA validation can finally pass.
 
 **Performance tests**
