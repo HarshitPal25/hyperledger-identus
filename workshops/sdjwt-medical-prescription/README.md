@@ -54,4 +54,4 @@ npm i
 npm run dev
 ```
 
-**This create a site on <http://localhost:3000>, open the link and continue with the on screen instructions to continue the workshop**
+**This creates a site on <http://localhost:3000>, open the link and continue with the on-screen instructions to continue the workshop**
