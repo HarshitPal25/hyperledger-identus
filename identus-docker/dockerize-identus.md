@@ -102,3 +102,41 @@ By changing the following:
   ```
 
 We recommended way of running docker compose `docker compose up --build --remove-orphans --force-recreate` (just to be extra sure there is no confusion with caches)
+
+### Windows Users - Line Ending Issues (CRLF vs LF)
+
+If you are running on Windows and encounter errors such as:
+
+```text
+exec /docker-entrypoint-initdb.d/init-script.sh: cannot execute: required file not found
+```
+
+or similar failures during container initialization, the cause is likely
+Windows-style line endings (CRLF) in the shell or JavaScript init scripts.
+
+Docker containers run on Linux and require Unix-style line endings (LF).
+Although the repository's `.gitattributes` file enforces LF for these files,
+your local Git configuration (e.g., `core.autocrlf=true`) may override this
+and convert files to CRLF on checkout.
+
+**To fix this**, convert the affected files back to LF using one of the
+following methods:
+
+1. **Using `dos2unix`:**
+
+   ```bash
+   dos2unix identus-docker/dbs/*.sh identus-docker/dbs/*.js
+   dos2unix workshops/sdjwt-medical-prescription/dbs/*.sh workshops/sdjwt-medical-prescription/dbs/*.js
+   ```
+
+2. **Using your IDE:** Most editors (VS Code, IntelliJ) allow you to change
+   the line ending from CRLF to LF in the status bar.
+
+3. **Preventing the issue globally:**
+
+   ```bash
+   git config --global core.autocrlf input
+   ```
+
+   This ensures Git stores files with LF and does not convert them to CRLF on
+   checkout.
